@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$(ls -f -l -n)"
+ls -f -l -n
