@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo -h -u guillaume:vincent hello 
+chown --from :guillaume vincent hello
