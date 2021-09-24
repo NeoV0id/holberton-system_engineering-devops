@@ -1,2 +1,2 @@
 #!/bin/bash
-ls --sort=extension -al -a -r -g ./* .. /boot
+ls --sort=extension -al -a -r -g ./ .. /boot
