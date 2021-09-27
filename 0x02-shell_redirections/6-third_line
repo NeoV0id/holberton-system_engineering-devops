@@ -1,2 +1,2 @@
 #!/bin/bash
-grep --context=3 iacta
+readarray -t a <iacta ; echo ${a[3]}
