@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#This script will display the content of etc/psswd
+
+while read -r line
+do
+	echo "$line" | cut -d ':' -f 1,3,6
+done > /etc/passwd
