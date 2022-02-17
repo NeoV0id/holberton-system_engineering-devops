@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #This script will display a list of files in the current directory
 
-#list=$ls 
-for i in ls
+for file in *;
 do
-	cut -d '-'
+	FILE=$(echo "$file" | cut -f 1 -d '-')
+	echo $FILE
 done
