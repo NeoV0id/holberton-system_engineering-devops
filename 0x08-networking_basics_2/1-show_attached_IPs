@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 #This script will display all the IPs addresses running on the computer
+
 ifconfig | sed -rn '/([0-9]{1,3}\.){3}[0-9]{1,3}/p' | cut -b 14- | cut -d ' ' -f 1
