@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #This script will display all the IPs addresses running on the computer
 
-ifconfig | grep inet | tr ' ' ',' | cut -d ',' -f 10
+ifconfig | grep "inet " | tr ' ' ',' | cut -d ',' -f 10
