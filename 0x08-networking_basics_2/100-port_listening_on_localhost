@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#Will listen to localhost 98 (terminal 2)
+nc -l localhost 98
