@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Displays 'To infinity and beyond' indefinitely, and 'I am invincible!!!' when receiving a SIGTERM.
+#Displays 'To infinity and beyond' indefinitely, and 'I am invincible!!!' when receiving a SIGTERM.
 
 while true
 do
