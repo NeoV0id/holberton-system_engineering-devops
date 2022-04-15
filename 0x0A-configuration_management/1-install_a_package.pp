@@ -2,5 +2,6 @@
 
 package { 'puppet-lint':
   ensure   => '2.5.0',
-  name     => 'puppet-lint'
+  command  => 'install',
+  provider => 'gem'
 }
