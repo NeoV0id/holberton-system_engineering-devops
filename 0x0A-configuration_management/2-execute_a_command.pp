@@ -1,5 +1,5 @@
 #kills a process named killmenow
 
-exec {
+exec { 'killmenow':
   command  => 'pkill'
 }
