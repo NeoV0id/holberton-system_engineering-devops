@@ -22,5 +22,6 @@ file_line { 'ssh_config':
 
 exec { 'systemctl':
   command => 'systemctl restart sshd',
+  path    => '/etc/ssh/sshd_config',
   user    => 'root'
 }
