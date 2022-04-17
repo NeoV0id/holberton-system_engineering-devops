@@ -15,7 +15,7 @@ file_line { 'ssh_config':
 file_line { 'ssh_config':
   path   => '/etc/ssh/sshd_config',
   line   => 'PasswordAuthentication no',
-  ensure => 'present',
+  ensure => 'present'
 }
 
 exec { 'systemctl':
