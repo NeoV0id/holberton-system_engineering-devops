@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # This script wil
 
-sed -i -d 's/ IdentityFile, ~/ .ssh/school' /etc/ssh/ssh_config
+cp /etc/ssh/ssh_config /etc/ssh_tmp
+echo /etc/ssh_tmp | sed 's/IdentityFile +$/.ssh\/school'
+cp -f /etc/ssh_tmp /etc/ssh/ssh_config
