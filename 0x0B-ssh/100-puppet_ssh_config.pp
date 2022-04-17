@@ -1,12 +1,12 @@
 # Will modify configuration file
 
+include stdlib
 file_line { 'ssh_config':
   ensure   => 'present',
   path     => '/etc/ssh/ssh_config',
   match    => 'IdentityFile ~/.ssh/(\w)',
   line     => 'IdentityFile ~/.ssh/school',
   multiple => 'true'
-  user     => 'root'
 }
 
 file_line { 'ssh_config':
@@ -17,7 +17,6 @@ file_line { 'ssh_config':
 }
 
 exec { 'systemctl':
-  command => 'systemctl restart sshd',
+  command => 'sudo systemctl restart sshd',
   path    => '/etc/ssh/sshd_config',
-  user    => 'root'
 }
