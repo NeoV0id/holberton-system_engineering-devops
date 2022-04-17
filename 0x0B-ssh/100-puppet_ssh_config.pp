@@ -17,3 +17,7 @@ file_line { 'ssh_config':
   line    => 'PasswordAuthentication no',
   match   => 'PasswordAuthentication yes'
 }
+exec { 'systemctl':
+  command => 'systemctl restart sshd',
+  user    => 'root'
+}
