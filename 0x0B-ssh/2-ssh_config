@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-# This script will
+# This script wil
+
+sed -i -d 's/ IdentityFile, ~/ .ssh/school' /etc/ssh/ssh_config
