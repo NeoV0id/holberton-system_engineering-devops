@@ -12,10 +12,10 @@ file_line { 'ssh_config':
 }
 
 file_line { 'ssh_config':
-  ensure  => present,
-  path    => '/etc/ssh/ssh_config',
-  line    => 'PasswordAuthentication no',
-  match   => 'PasswordAuthentication yes'
+  ensure => present,
+  path   => '/etc/ssh/ssh_config',
+  line   => 'PasswordAuthentication no',
+  match  => 'PasswordAuthentication yes'
 }
 exec { 'systemctl':
   command => 'systemctl restart sshd',
