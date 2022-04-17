@@ -7,15 +7,17 @@ File['ssh_config'] {
 file_line { 'ssh_config':
   ensure => present,
   path   => '/etc/ssh/ssh_config',
-  line   => '.ssh/school',
-  match  => '.ssh/[.+]'
+  line   => 'IdentityFile ~/.ssh/school',
+  match  => 'IdentityFile ~/.ssh/\w',
+  user   => 'root'
 }
 
 file_line { 'ssh_config':
   ensure => present,
   path   => '/etc/ssh/ssh_config',
   line   => 'PasswordAuthentication no',
-  match  => 'PasswordAuthentication yes'
+  match  => 'PasswordAuthentication yes',
+  user   => 'root'
 }
 exec { 'systemctl':
   command => 'systemctl restart sshd',
