@@ -2,5 +2,5 @@
 # This script wil
 
 cp /etc/ssh/ssh_config /etc/ssh_tmp
-echo /etc/ssh_tmp | sed 's/IdentityFile +$/.ssh\/school'
+echo /etc/ssh_tmp | sed 's/IdentityFile +$/.ssh\/school'|sed 's/PasswordAuthentication +$/ yes'
 cp -f /etc/ssh_tmp /etc/ssh/ssh_config
