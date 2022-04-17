@@ -5,17 +5,19 @@ File['ssh_config'] {
 }
 
 file_line { 'ssh_config':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  match  => 'IdentityFile ~/.ssh/\w',
-  line   => 'IdentityFile ~/.ssh/school',
-  user   => 'root'
+  ensure   => 'present',
+  path     => '/etc/ssh/ssh_config',
+  match    => 'IdentityFile ~/.ssh/\w',
+  line     => 'IdentityFile ~/.ssh/school',
+  multiple => 'true'
+  user     => 'root'
 }
 
 file_line { 'ssh_config':
+  ensure => 'present',
   path   => '/etc/ssh/sshd_config',
-  line   => 'PasswordAuthentication no',
-  ensure => 'present'
+  match  => 'PasswordAuthentication yes',
+  line   => 'PasswordAuthentication no'
 }
 
 exec { 'systemctl':
