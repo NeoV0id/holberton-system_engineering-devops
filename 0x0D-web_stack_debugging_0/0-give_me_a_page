@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
--- This script will 
+# This script will display a page
+
+netstat -a -p TCP -n | grep 8080
