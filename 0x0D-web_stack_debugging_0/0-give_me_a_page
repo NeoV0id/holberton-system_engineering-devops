@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script will display a page
 
-docker service scale
+service apache2 start
