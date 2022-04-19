@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script will display a page
 
-netstat -a -p TCP -n | grep 8080
+curl -k 0:8080
