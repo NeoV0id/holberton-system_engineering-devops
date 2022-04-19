@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script will display a page
 
-curl -k 0:8080
+docker service scale
