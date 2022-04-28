@@ -9,5 +9,6 @@ then
 	sed "s/listen +$ 8080/ 80/"
 	sed "s/listen [::] +$ 8080/ 80/"
 fi
+sed "s/listen +$ /ipv4only=on"
 service nginx restart
 
