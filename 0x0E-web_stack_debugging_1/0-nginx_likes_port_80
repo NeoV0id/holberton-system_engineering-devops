@@ -2,10 +2,12 @@
 # This script will debug a server
 
 if sudo systemctl status nginx
+then
 	sudo systemctl start nginx.service
-else if sudo lsof -i :80 -s TCP:LISTEN
-	sed 's/listen +$ 8080/ 80/'
-	sed 's/listen [::] +$8080/ 80/'
+elif sudo lsof -i :80 -s TCP:LISTEN
+then
+	sed "s/listen +$ 8080/ 80/"
+	sed "s/listen [::] +$ 8080/ 80/"
 fi
 service nginx restart
 
