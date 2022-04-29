@@ -6,7 +6,7 @@ then
 	sudo systemctl start nginx.service
 elif sudo lsof -i :80 -s TCP:LISTEN
 then
-	sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+	sed -i 's/8080/80/g' /etc/nginx/conf. d
 fi
 sed "s/listen +$ /ipv4only=on"
 sudo service nginx restart
