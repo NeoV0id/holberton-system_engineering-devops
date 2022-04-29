@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # This script will debug a server
 
-ln -sf /etc/nginx/sites-enabled/default /etc/nginx/sites-available
+#ln -sf /etc/nginx/sites-enabled/default /etc/nginx/sites-available
 if sudo systemctl status nginx
 then
 	sudo systemctl start nginx.service
-elif sudo lsof -i :80 -s TCP:LISTEN
+fi
+ufw allow 'Nginx HTTP'
+if sudo lsof -i :80 -s TCP:LISTEN
 then
 	sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 fi
