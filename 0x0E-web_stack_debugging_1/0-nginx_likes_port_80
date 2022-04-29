@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script will debug a server
 
-ln -s /etc/nginx/sites-enabled/default /etc/nginx/nginx.conf
+ln -sf /etc/nginx/sites-enabled/default /etc/nginx/nginx.conf
 if sudo systemctl status nginx
 then
 	sudo systemctl start nginx.service
