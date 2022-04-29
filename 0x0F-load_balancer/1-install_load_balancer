@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script will configure HAproxy on server
+
+sudo apt-get -y update
+sudo apt-get -y install haproxy
