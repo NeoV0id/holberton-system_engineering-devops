@@ -9,4 +9,4 @@ then
 	sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 fi
 sed "s/listen +$ /ipv4only=on"
-service nginx restart
+sudo service nginx restart
