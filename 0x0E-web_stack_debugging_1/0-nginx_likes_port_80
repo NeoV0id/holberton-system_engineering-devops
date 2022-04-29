@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # This script will debug a server
 
+ln -s /etc/nginx/nginx.conf /etc/nginx/conf.d/tomcat.conf
 if sudo systemctl status nginx
 then
 	sudo systemctl start nginx.service
 elif sudo lsof -i :80 -s TCP:LISTEN
 then
-	sed -i 's/8080/80/g' /etc/nginx/conf. d
+	sed -i 's/8080/80/g' /etc/nginx/conf.d/tomcat.conf
 fi
-sed "s/listen +$ /ipv4only=on"
+sed "s/ipv4only=on"
 sudo service nginx restart
