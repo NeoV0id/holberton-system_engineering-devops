@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
-# Install nginx
+# Redirect a page
 
 apt-get -y update
 apt-get -y install nginx
 
 ufw allow 'Nginx HTTP'
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sed -i '\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n' /etc/nginx/sites-available/default
 echo "Hello World" > /var/www/html/index.nginx-debian.html
 service nginx start
