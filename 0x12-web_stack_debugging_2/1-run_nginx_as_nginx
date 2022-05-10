@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script will run nginx as nginx
+#This script will run nginx as nginx
 
 pkill apache2
 chown nginx:nginx /etc/nginx/nginx.conf
