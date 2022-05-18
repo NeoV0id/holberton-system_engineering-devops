@@ -3,9 +3,10 @@
 
 
 if __name__ == '__main__':
-    import urllib
-    import sys
+
     import requests
+    import sys
+    import urlib
 
     UserId = int(sys.argv[1])
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
