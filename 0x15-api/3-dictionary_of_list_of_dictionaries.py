@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Exports data in the JSON format"""
+""" Module for task 3 """
 
 if __name__ == "__main__":
 
