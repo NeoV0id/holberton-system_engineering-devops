@@ -3,7 +3,7 @@
 
 
 if __name__ == "__main__":
-    
+
     import csv
     import requests
     import sys

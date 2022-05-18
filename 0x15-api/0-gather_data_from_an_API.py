@@ -9,7 +9,7 @@ if __name__ == '__main__':
 
     UserId = int(sys.argv[1])
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
-                         .format(UserId))
+                        .format(UserId))
     name = user.json().get("name")
 
     tasks = 0
@@ -18,7 +18,7 @@ if __name__ == '__main__':
 
     for i in RemainingTasks.json():
         if i.get("userId") == int(UserId):
-            tasks ++
+            tasks += 1
             if i.get("completed"):
                 taskComplete.append(i)
 
