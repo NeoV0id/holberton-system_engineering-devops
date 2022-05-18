@@ -27,4 +27,4 @@ if __name__ == '__main__':
           .format(name, len(taskComplete), tasks))
 
     for j in taskComplete:
-        print("\t {}".format(j.get("title")))
+        print("\t {}".format(task.get("title")))
