@@ -6,7 +6,6 @@ if __name__ == '__main__':
 
     import requests
     import sys
-    import urlib
 
     UserId = int(sys.argv[1])
     user = requests.get("https://jsonplaceholder.typicode.com/users/{}"
@@ -27,4 +26,4 @@ if __name__ == '__main__':
           .format(name, len(taskComplete), tasks))
 
     for j in taskComplete:
-        print("\t {}".format(task.get("title")))
+        print("\t {}".format(j.get("title")))
