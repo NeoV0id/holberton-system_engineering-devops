@@ -5,7 +5,7 @@ import requests
 
 
 def top_ten(subreddit):
-    """ function
+    """ This function will
         print the titles of the first 10 hot post
     """
     headers = {'User-Agent': 'nuwtts'}

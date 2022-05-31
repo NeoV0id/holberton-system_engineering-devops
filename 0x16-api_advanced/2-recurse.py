@@ -5,7 +5,9 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=""):
-    """ function print 10 hot titles of subreddit """
+    """ This function will
+        print 10 hot titles of subreddit
+    """
     headers = {'User-Agent': 'nuwtts'}
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {

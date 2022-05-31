@@ -5,7 +5,7 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    """ function
+    """ This function will
         return: number of subscriber
     """
     headers = {'User-Agent': 'nuwtts'}
