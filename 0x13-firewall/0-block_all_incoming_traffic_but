@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script will configure a firewall to block all incoming traffic
+
+apt-get -y update
+apt-get -u install ufw
+ufw default deny incoming
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw allow 80/tcp
+ufw enable
