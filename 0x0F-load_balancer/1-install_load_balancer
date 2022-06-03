@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # This script will configure HAproxy on server
 
-sudo apt-get -y update
-sudo apt-get -y install haproxy
+apt-get -y update
+apt-get -y install haproxy
+sed -i "s/ENABLED=0/ENABLED=1" /etc/default/haproxy
+cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
+sed -i "$ a\listen 3633-lb-01\n\tbind *:80\n\tmode http\n\tbalance roundrobin\n\toption httpclose\n\toption forwardfor\n\tserver 3633-web-01 34.148.56.101:80 check\n\tserver 3633-web-02 34.148.253.38:80 check" /etc/haproxy/haproxy.cfg
+service haproxy start
