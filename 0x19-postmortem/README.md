@@ -29,4 +29,5 @@ In order to have a more secured and monitored infrastructure, it would be smarte
 
 Links to images:
 [1-distributed_web_infrastructure](https://github.com/NeoV0id/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/1-distributed_web_infrastructure)
+
 [3-scale_up](https://github.com/NeoV0id/holberton-system_engineering-devops/blob/master/0x09-web_infrastructure_design/3-scale_up)
